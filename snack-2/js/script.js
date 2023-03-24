@@ -3,3 +3,61 @@
 // Generare numeri random al posto degli 0 nelle proprietà:
 // Punti fatti e falli subiti.
 // Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+
+const soccerTeam = [
+    {
+        nome: "milan",
+        punti: 0,
+        falli: 0
+
+    },
+    {
+        nome: "inter",
+        punti: 0,
+        falli: 0
+
+    },
+    {
+        nome: "roma",
+        punti: 0,
+        falli: 0
+
+    },
+    {
+        nome: "lazio",
+        punti: 0,
+        falli: 0
+
+    },
+    {
+        nome: "napoli",
+        punti: 0,
+        falli: 0
+
+    }
+];
+
+
+const rndPoint = getRndInteger(1, 10);
+const rndFoul = getRndInteger(1, 10);
+
+//////FUNCTIONS///////////
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function insertData(arrayObj) {
+    const { punti, falli } = arrayObj;
+
+    let newPoint = ""; 
+    arrayObj.forEach(() => {
+       
+        const newValue = getRndInteger(1, 10);
+        newPoint += newValue;
+
+        console.log(newPoint);
+    })
+   return newPoint; 
+}
