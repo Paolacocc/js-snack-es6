@@ -39,30 +39,27 @@ const soccerTeam = [
 ];
 
 
-// const rndPoint = getRndInteger(1, 10);
-// const rndFoul = getRndInteger(1, 10);
+const rndPoint = getRndInteger(1, 10);
+const rndFoul = getRndInteger(1, 10);
 
-//////FUNCTIONS///////////
+//////////////FUNCTIONS///////////////
 
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+};
 
-function insertData(arrayObj) {
-    const { punti, falli } = arrayObj;
+
+
+
+ function insertData(arrayObj) {
+     const { punti, falli } = arrayObj;
 
     let newPoint = 0; 
     for(let key in soccerTeam) {
         newPoint += soccerTeam[key];
         console.log(key);
+        soccerTeam[key].punti =rndPoint;
     }
-    // arrayObj.forEach((elem) => {
-       
-    //     let newPoint = elem.punti;
-    //     newPoint += getRndInteger(1, 10);
-        
-
-    //     console.log(newPoint);
-    // })
-   return newPoint;
-}
+   
+    return newPoint;
+ }
